@@ -1,0 +1,6 @@
+== Pingr Prototype
+
+- add user
+- update user location
+- get all users
+- get one user by id
