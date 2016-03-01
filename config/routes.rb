@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'users' => 'users#index'
-  get 'users/:facebook_uuid' => 'users#show'
+  get 'users/:facebook_uuid' => 'users#show', :constraints => { :facebook_uuid => /[^\/]+/ }
   post 'users' => 'users#create'
-  put 'users/:facebook_uuid' => 'users#update'
+  put 'users/:facebook_uuid' => 'users#update', :constraints => { :facebook_uuid => /[^\/]+/ }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
